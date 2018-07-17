@@ -11,17 +11,21 @@ package model;
  */
 public class Mesa extends GenericModel {
      
-     private int numero;
+    private Integer numero;
 
-    public int getNumero() {
-        return numero;
+    public Mesa() {
+    	super();
     }
+     
+    public Integer getNumero() {
+		return numero;
+	}
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
 
-    @Override
+	@Override
     public int hashCode() {
         int hash = 3;
         return hash;

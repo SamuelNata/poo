@@ -21,6 +21,10 @@ public class Conta extends GenericModel{
     
     private Mesa mesa;
 
+    public Conta() {
+    	super();
+    }
+    
     public List<ItemConta> getItens() {
         return itens;
     }

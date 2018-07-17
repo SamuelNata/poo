@@ -15,22 +15,24 @@ public class Cliente extends Pessoa {
     
     private String credito;
     
-    public String getCartaoFidelidade() {
-        return cartaoFidelidade;
+    public Cliente() {
+    	super();
     }
 
-    public void setCartaoFidelidade(String cartaoFidelidade) {
-        this.cartaoFidelidade = cartaoFidelidade;
-    }
+	public String getCartaoFidelidade() {
+		return cartaoFidelidade;
+	}
 
-    public String getCredito() {
-        return credito;
-    }
+	public void setCartaoFidelidade(String cartaoFidelidade) {
+		this.cartaoFidelidade = cartaoFidelidade;
+	}
 
-    public void setCredito(String credito) {
-        this.credito = credito;
-    }
-    
-    
+	public String getCredito() {
+		return credito;
+	}
+
+	public void setCredito(String credito) {
+		this.credito = credito;
+	}
     
 }

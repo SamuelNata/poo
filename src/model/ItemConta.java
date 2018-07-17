@@ -14,34 +14,34 @@ public class ItemConta extends GenericModel {
     
     private Item item;
    
-    private int quantidade;
+    private Integer quantidade;
 
-    public Conta getConta() {
-        return conta;
+    public ItemConta() {
+    	super();
     }
 
-    public void setConta(Conta conta) {
-        this.conta = conta;
-    }
+	public Conta getConta() {
+		return conta;
+	}
 
-    public Item getItem() {
-        return item;
-    }
+	public void setConta(Conta conta) {
+		this.conta = conta;
+	}
 
-    public void setItem(Item item) {
-        this.item = item;
-    }
+	public Item getItem() {
+		return item;
+	}
 
-    public double getValor() {
-        return quantidade * item.getValor();
-    }
+	public void setItem(Item item) {
+		this.item = item;
+	}
 
-       public int getQuantidade() {
-        return quantidade;
-    }
+	public Integer getQuantidade() {
+		return quantidade;
+	}
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
     
 }

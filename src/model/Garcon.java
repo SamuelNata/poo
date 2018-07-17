@@ -13,32 +13,36 @@ public class Garcon extends Pessoa{
     
     private String matricula;
     
-    private double salario;
+    private Double salario;
     
     private String carteiraTrabalho;
 
-    public String getMatricula() {
-        return matricula;
+    public Garcon() {
+    	super();
     }
 
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
+	public String getMatricula() {
+		return matricula;
+	}
 
-    public double getSalario() {
-        return salario;
-    }
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
 
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
+	public Double getSalario() {
+		return salario;
+	}
 
-    public String getCarteiraTrabalho() {
-        return carteiraTrabalho;
-    }
+	public void setSalario(Double salario) {
+		this.salario = salario;
+	}
 
-    public void setCarteiraTrabalho(String carteiraTrabalho) {
-        this.carteiraTrabalho = carteiraTrabalho;
-    }
+	public String getCarteiraTrabalho() {
+		return carteiraTrabalho;
+	}
+
+	public void setCarteiraTrabalho(String carteiraTrabalho) {
+		this.carteiraTrabalho = carteiraTrabalho;
+	}
     
 }

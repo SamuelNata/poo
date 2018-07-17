@@ -15,35 +15,39 @@ public class Item extends GenericModel {
     
     private String descricao;
     
-    private double valor;
+    private Double valor;
     
     private String marca;
 
+    public Item() {
+    	super();
+    }
+    
     public String getDescricao() {
-        return descricao;
-    }
+		return descricao;
+	}
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 
-    public double getValor() {
-        return valor;
-    }
+	public Double getValor() {
+		return valor;
+	}
 
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
 
-    public String getMarca() {
-        return marca;
-    }
+	public String getMarca() {
+		return marca;
+	}
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
 
-    @Override
+	@Override
     public int hashCode() {
         int hash = 7;
         return hash;

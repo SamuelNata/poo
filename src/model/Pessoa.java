@@ -26,42 +26,43 @@ public class Pessoa extends GenericModel {
         this.nome =  nome;
     }
 
-    public Pessoa(){;
+    public Pessoa(){
+    	super();
     }
 
     public String getNome() {
-        return nome;
-    }
+		return nome;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public String getCpf() {
-        return Cpf;
-    }
+	public String getCpf() {
+		return Cpf;
+	}
 
-    public void setCpf(String Cpf) {
-        this.Cpf = Cpf;
-    }
+	public void setCpf(String cpf) {
+		Cpf = cpf;
+	}
 
-    public String getEndereco() {
-        return endereco;
-    }
+	public String getEndereco() {
+		return endereco;
+	}
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
 
-    public String getTelefone() {
-        return telefone;
-    }
+	public String getTelefone() {
+		return telefone;
+	}
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
 
-    @Override
+	@Override
     public int hashCode() {
         int hash = 5;
         return hash;
