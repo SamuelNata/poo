@@ -45,7 +45,7 @@ public abstract class GenericController <T extends GenericModel>{
     public String listar() {
         String lista = "Lista\n";
         for (T item : repository.listar()) {
-            lista += item + "\n";
+            lista += item.getId() + " - " + item + "\n";
         }
         return lista;
     }

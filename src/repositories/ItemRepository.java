@@ -12,5 +12,8 @@ import model.Item;
  * @author itamir.filho
  */
 public class ItemRepository extends GenericRepository <Item>{
-    
+
+	public ItemRepository(){
+		super();
+	}
 }
