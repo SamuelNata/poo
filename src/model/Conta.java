@@ -7,18 +7,32 @@ package model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
 /**
  *
  * @author itamir.filho
  */
-public class Conta extends GenericModel{
-    
+@Entity(name="conta")
+public class Conta implements GenericModel {
+	@Id @GeneratedValue
+	private Integer id;
+	
+	@OneToMany(cascade = CascadeType.ALL)
     private List<ItemConta> itens;
     
+    @ManyToOne
     private Garcon garcon;
     
+    @ManyToOne
     private Cliente cliente;
     
+    @ManyToOne
     private Mesa mesa;
 
     public Conta() {
@@ -57,4 +71,11 @@ public class Conta extends GenericModel{
         this.mesa = mesa;
     }
    
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 }

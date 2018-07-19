@@ -7,12 +7,14 @@ package model;
 
 import java.util.Objects;
 
+import javax.persistence.MappedSuperclass;
+
 /**
  *
  * @author itamir.filho
  */
-public class Pessoa extends GenericModel {
-
+@MappedSuperclass
+public abstract class Pessoa implements GenericModel {
     private String nome;
     
     private String Cpf;
@@ -61,7 +63,7 @@ public class Pessoa extends GenericModel {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-
+	
 	@Override
     public int hashCode() {
         int hash = 5;

@@ -5,12 +5,19 @@
  */
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author itamir.filho
  */
-public class Mesa extends GenericModel {
-     
+@Entity(name="mesa")
+public class Mesa implements GenericModel {
+	@Id @GeneratedValue
+	private Integer id;
+	
     private Integer numero;
 
     public Mesa() {
@@ -23,6 +30,19 @@ public class Mesa extends GenericModel {
 
 	public void setNumero(Integer numero) {
 		this.numero = numero;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	@Override
+	public String toString() {
+		return "{id=" + id + ", numero=" + numero + "}";
 	}
 
 	@Override

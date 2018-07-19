@@ -5,13 +5,24 @@
  */
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 /**
  *
  * @author itamir.filho
  */
-public class ItemConta extends GenericModel {
-    private Conta conta;
+@Entity(name="itemconta")
+public class ItemConta implements GenericModel {
+	@Id @GeneratedValue
+	private Integer id;
+	
+	@ManyToOne
+	private Conta conta;
     
+	@ManyToOne
     private Item item;
    
     private Integer quantidade;
@@ -44,4 +55,11 @@ public class ItemConta extends GenericModel {
 		this.quantidade = quantidade;
 	}
     
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 }

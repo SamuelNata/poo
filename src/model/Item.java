@@ -7,12 +7,19 @@ package model;
 
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author itamir.filho
  */
-public class Item extends GenericModel {
-    
+@Entity(name="item")
+public class Item implements GenericModel {
+	@Id @GeneratedValue
+	private Integer id;
+	
     private String descricao;
     
     private Double valor;
@@ -47,6 +54,14 @@ public class Item extends GenericModel {
 		this.marca = marca;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	@Override
     public int hashCode() {
         int hash = 7;
@@ -74,10 +89,12 @@ public class Item extends GenericModel {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return descricao + " - " + marca + " - " + valor;
-    }
+	@Override
+	public String toString() {
+		return "{id=" + id + ", descricao=" + descricao + ", valor=" + valor + ", marca=" + marca + "}";
+	}
+
+    
     
     
 }

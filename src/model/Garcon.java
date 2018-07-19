@@ -5,12 +5,19 @@
  */
 package model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author itamir.filho
  */
+@Entity(name="garcon")
 public class Garcon extends Pessoa{
-    
+	@Id @GeneratedValue
+	private Integer id;
+	
     private String matricula;
     
     private Double salario;
@@ -45,4 +52,19 @@ public class Garcon extends Pessoa{
 		this.carteiraTrabalho = carteiraTrabalho;
 	}
     
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "{id=" + id + ", matricula=" + matricula + ", salario=" + salario + ", carteiraTrabalho="
+				+ carteiraTrabalho + "}";
+	}
+	
+	
 }

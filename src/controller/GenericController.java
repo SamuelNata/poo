@@ -28,22 +28,16 @@ public abstract class GenericController <T extends GenericModel>{
         repository.removeItem(it);
     }
     
-    public void atualizar(T itemOld, T itemNew){
-        repository.removeItem(itemOld);
-        repository.addItem(itemNew);
+    public void atualizar(T item){
+        repository.update(item);
     }
     
     public T getById(Integer id) {
-    	for(T item : repository.listar() ) {
-    		if(item.getId()==id) {
-    			return item;
-    		}
-    	}
-    	return null;
+    	return (T) repository.getById(id);
     }
     
     public String listar() {
-        String lista = "Lista\n";
+        String lista = "Lista:\n";
         for (T item : repository.listar()) {
             lista += item.getId() + " - " + item + "\n";
         }
